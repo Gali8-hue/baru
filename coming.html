@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/all.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bigimg {
+    background-image: url('img/6.jpg');
+    height: 60%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Helvetica";
+    font-size: 25px;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+}
+
+.middle p {
+    letter-spacing: 2px;
+}
+
+hr {
+ margin: auto;
+ width: 40%;
+ color: white;
+}
+
+
+
+
+</style>
+
+<body>
+<!--COMING SOON PAGE-->
+    <div class="bigimg">
+        <div class="topleft">
+            <p>Logo</p>
+        </div>
+        <div class="middle">
+            <h1>COMING SOON</h1>
+            <hr>
+            <p id="demo" style=" font-size:30px"></p>
+        </div>
+        <div class="bottomleft">
+            <p>powered </p>
+        </div>
+        </div>
+    </div>
+
+<script>
+    var countDownDate = new Date ("Jan 5, 2022 15:37:25").getTime();
+    var countdownfunction = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor ((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor ((distance % (1000 * 60 * 60)) / (1000 * 60 ));
+        var seconds = Math.floor ((distance % (1000 * 60 )) / 1000);
+
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("demo").innerHTML = "EXPIRED"}   
+    }, 1000);
+</script>
+
+<!--NAVIGATION BAR--> 
+<div class="navbar">
+    <a class="active" href="#" ><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="#"><i class=" fa fa-fw fa-search"></i>Search</a>
+    <a href="#"><i class=" fa fa-fw fa-envelope"></i>Contac</a>
+    <a href="#"><i class=" fa fa-fw fa-user"></i>Login</a>
+</div>
+
+ <!--Scrollspy & Affix NAVIGATION-->
+ <div class="container-fluid" style="background-color: lightgrey; height: 100px;"> 
+    <h1>Scrollspy & Affix Example</h1>
+    <p>Scroll this page..</p>
+</div>
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">La Blanc</a>
+        </div>  
+        <div>
+           <div class="collapse navbar-collapse" id="myNavbar">
+               <ul class="nav navbar-nav">
+                   <li><a href="#section1">Section1</a></li>
+                   <li><a href="#section2">Section2</a></li>
+                   <li><a href="#section3">Section3</a></li>
+                   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section4 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#section41">Section4-1</a></li>
+                        <li><a href="#section42">Section4-2</a></li>
+                    </ul>
+                 </li>
+               </ul>
+           </div> 
+        </div>
+    </div>
+</nav>
+
+<div id="section1" class="container-fluid">
+    <h1>Section 1</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae id placeat sequi doloribus sit molestias iste quam sunt consequatur ex porro deleniti ea itaque ratione consequuntur ipsam possimus, fugit numquam.</p>
+<div id="section2" class="container-fluid">
+    <h1>Section 2</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus ipsa eaque ex, deserunt, illo doloremque qui iusto numquam quia autem, consequuntur atque voluptas asperiores. Soluta quis autem sint illum assumenda.</p>
+<div id="section3" class="container-fluid">
+    <h1>Section 3</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore voluptas libero natus, deserunt molestiae quibusdam, hic dolore quod expedita voluptatum nam officiis soluta. Aperiam dolore quo quia mollitia incidunt nesciunt.</p>
+<div id="section41" class="container-fluid">
+    <h1>Section 4 submenu 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quia necessitatibus, iste natus sed nesciunt officiis cum ab facere est sint minus ducimus suscipit! Repudiandae quo magnam doloremque ab sapiente?</p>
+<div id="section42" class="container-fluid">
+    <h1>Section 4 submenu 2</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsum cum blanditiis aut minus eligendi nostrum, enim alias tenetur voluptas accusamus ipsa quisquam mollitia quia placeat est nobis laborum consequuntur.</p>   
+</div>
+</body>
+</html>
